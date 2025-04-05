@@ -9,7 +9,8 @@ public class PastPresent : MonoBehaviour
     [SerializeField] private PuzzleManager puzzleManager;
     [SerializeField] private Texture2D puzzleImage;
     [SerializeField] private int opt;
-
+    // 9C9C9C - culoare trecut perete
+    // 7E7E7E - culoare present perete
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
