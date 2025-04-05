@@ -12,7 +12,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private Transform piecePrefab;
 
     [Header("UI Elements")]
-    [SerializeField] private List<Texture2D> imageTextures;
+    [SerializeField] private Texture2D imageTextures;
     [SerializeField] private Transform levelSelectPanel;
     [SerializeField] private Image levelSelectPrefab;
 
@@ -38,6 +38,8 @@ public class PuzzleManager : MonoBehaviour
             image.GetComponent<Button>().onClick.AddListener(delegate { StartGame(texture); });
         }
         */
+        difficulty = Random.Range(3, 6);
+        StartGame(imageTextures);
     }
 
     public void StartGame(Texture2D jigsawTexture)

@@ -160,4 +160,9 @@ public class WordScramble : MonoBehaviour
         memoryPanel.SetActive(true);
         memoryText.gameObject.SetActive(true);
     }
+
+    public void GoToNextScene()
+    {
+
+    }
 }

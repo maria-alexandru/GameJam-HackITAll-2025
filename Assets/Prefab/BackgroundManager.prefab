@@ -49,16 +49,26 @@ MonoBehaviour:
   - {fileID: -2464690855287773643, guid: bc6ca9ceca7e8dd4a97683a2a14b4f29, type: 3}
   - {fileID: 8197047826604361390, guid: babc3ffb29f353942b9770907d9e6fb0, type: 3}
   - {fileID: -3521427111303423466, guid: 8d1d55c2d7c4f504b9f992d661b084bb, type: 3}
+  - {fileID: 7796136391868462456, guid: fa308d6679dda864ca8070577ba6e859, type: 3}
   presentSprites:
   - {fileID: -6762806206646994688, guid: 9c738f21e1e9fa044b7dddd3ae876ca7, type: 3}
   - {fileID: -482408867272285027, guid: ba1fe9f6bb1271f4e883aadb5d180e89, type: 3}
   - {fileID: 8197047826604361390, guid: 73f87213ddf7bf94b996b3957d533855, type: 3}
   - {fileID: -3521427111303423466, guid: 30ed19ce10bcd4e4f9c8b60224fc8129, type: 3}
+  - {fileID: 6723359014397041180, guid: 13955d541aac2c844ad8708eaf6969e0, type: 3}
+  pastWall: {fileID: -965144282303421702, guid: 4261fafe387c4e4469e0bed748900fa9, type: 3}
+  presentWall: {fileID: -3392885455431205278, guid: 71f98ad01b4b4c646b1ff964930f3ebe, type: 3}
   backgroundImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  wallsImages:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   puzzleManager: {fileID: 0}
   puzzleImage: {fileID: 2800000, guid: 5e32514a4966a7d4ea735c7a670286e8, type: 3}
-  opt: 0
+  opt: -1

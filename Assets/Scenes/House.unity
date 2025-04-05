@@ -347,11 +347,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19969992}
   m_CullTransparentMesh: 1
---- !u!1 &48353529 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4655086488657635733, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
-  m_PrefabInstance: {fileID: 998434998}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &68666468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1231,10 +1226,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 166398859205955583, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 770096989757548256, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
       propertyPath: 'items.Array.data[0]'
       value: 
@@ -1250,6 +1241,10 @@ PrefabInstance:
     - target: {fileID: 4655086488657635733, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852275888356015909, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToNextScene
       objectReference: {fileID: 0}
     - target: {fileID: 5287346165131071656, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1295,14 +1290,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordScramble
       objectReference: {fileID: 0}
-    - target: {fileID: 8341539208124746730, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
-      propertyPath: memoryText
-      value: 
-      objectReference: {fileID: 1613610478}
-    - target: {fileID: 8341539208124746730, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
-      propertyPath: memoryPanel
-      value: 
-      objectReference: {fileID: 48353529}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1357,34 +1344,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
-      propertyPath: opt
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
-      propertyPath: pastWall
-      value: 
-      objectReference: {fileID: -965144282303421702, guid: 4261fafe387c4e4469e0bed748900fa9, type: 3}
-    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
-      propertyPath: presentWall
-      value: 
-      objectReference: {fileID: -3392885455431205278, guid: 71f98ad01b4b4c646b1ff964930f3ebe, type: 3}
-    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
-      propertyPath: pastSprites.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
-      propertyPath: wallsImages.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
-      propertyPath: 'pastSprites.Array.data[4]'
-      value: 
-      objectReference: {fileID: 7796136391868462456, guid: fa308d6679dda864ca8070577ba6e859, type: 3}
-    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
-      propertyPath: presentSprites.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
       propertyPath: 'wallsImages.Array.data[0]'
       value: 
       objectReference: {fileID: 1125722748}
@@ -1400,14 +1359,6 @@ PrefabInstance:
       propertyPath: 'wallsImages.Array.data[3]'
       value: 
       objectReference: {fileID: 345377648}
-    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
-      propertyPath: backgroundImages.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
-      propertyPath: 'presentSprites.Array.data[4]'
-      value: 
-      objectReference: {fileID: 6723359014397041180, guid: 13955d541aac2c844ad8708eaf6969e0, type: 3}
     - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
       propertyPath: 'backgroundImages.Array.data[0]'
       value: 
@@ -1932,17 +1883,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f554e08fdef20a64e87538b2e9bf7838, type: 3}
---- !u!114 &1613610478 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7833096844261818598, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
-  m_PrefabInstance: {fileID: 998434998}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1622182259
 GameObject:
   m_ObjectHideFlags: 0
