@@ -28,9 +28,6 @@ public class CameraFollow : MonoBehaviour
         // coordonate orizontale
         minX = bounds.gameObject.transform.position.x - (size.x / 2f) + cam.orthographicSize * cam.aspect;
         maxX = bounds.gameObject.transform.position.x + (size.x /2f) - cam.orthographicSize * cam.aspect;
-
-        Debug.Log("x center: " + bounds.offset.x);
-        Debug.Log(minX + " " + maxX);
     }
 
     // Update is called once per frame
