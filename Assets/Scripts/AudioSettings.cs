@@ -1,49 +1,32 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AudioSettings : MonoBehaviour
+public class AudioSettingsManager : MonoBehaviour
 {
-    public AudioSource musicSource;
-    public AudioSource sfxSource;
-
     public Toggle musicToggle;
     public Slider musicSlider;
 
-    public Toggle sfxToggle;
-    public Slider sfxSlider;
+    private AudioSource musicSource;
 
     void Start()
     {
+        musicSource = GameObject.Find("MusicManager").GetComponent<AudioSource>();
+
         musicSlider.value = musicSource.volume;
-        sfxSlider.value = sfxSource.volume;
-
-        musicToggle.isOn = musicSource.mute == false;
-        sfxToggle.isOn = sfxSource.mute == false;
-
-        musicToggle.onValueChanged.AddListener(ToggleMusic);
-        sfxToggle.onValueChanged.AddListener(ToggleSFX);
+        musicToggle.isOn = musicSource.volume > 0;
 
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
-        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+        musicToggle.onValueChanged.AddListener(ToggleMusic);
     }
 
-    void ToggleMusic(bool isOn)
-    {
-        musicSource.mute = !isOn;
-    }
-
-    void ToggleSFX(bool isOn)
-    {
-        sfxSource.mute = !isOn;
-    }
-
-    void SetMusicVolume(float volume)
+    public void SetMusicVolume(float volume)
     {
         musicSource.volume = volume;
+        musicToggle.isOn = volume > 0;
     }
 
-    void SetSFXVolume(float volume)
+    public void ToggleMusic(bool isOn)
     {
-        sfxSource.volume = volume;
+        musicSource.volume = isOn ? musicSlider.value : 0f;
     }
 }

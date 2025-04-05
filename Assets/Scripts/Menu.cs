@@ -12,6 +12,7 @@ public class Menu : MonoBehaviour
 
     private CanvasGroup canvasGroup;
     private CanvasGroup optionsCanvasGroup;
+    
 
     private bool hasFadedStory = false;
     private bool hasFadedOptions = false;
