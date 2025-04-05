@@ -40,7 +40,7 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate() 
     {
         Vector3 targetPos = target.TransformPoint(new Vector3(0, Yoffset, Zoffset));
-        transform.position = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.fixedDeltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime);
     }
 
     // limitele fara dimensiunea camerei

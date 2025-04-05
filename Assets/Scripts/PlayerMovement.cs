@@ -33,11 +33,11 @@ public class PlayerMovement : MonoBehaviour
 
         // limitez coordonatele
         if(player != null)
-            player.position = new Vector3(Mathf.Clamp(player.position.x, margins.getMinX(), margins.getMaxX()), player.position.y, player.position.z);
+            player.position = new Vector3(Mathf.Clamp(player.position.x, margins.getMinX(), margins.getMaxX()), player.position.y, player.position.z) ;
     }
 
     void Orientation() {
-        if((orientation && Input.GetKeyDown(KeyCode.D)) == true)
+        if(orientation && (move > 0) == true)
         {
             Vector3 scale = transform.localScale;
             scale.x *= -1;
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             orientation = false;
         } 
         
-        if(((orientation == false) && Input.GetKeyDown(KeyCode.A)) == true) {
+        if((orientation == false) && (move < 0) == true) {
             
             Vector3 scale = transform.localScale;
             scale.x *= -1;
