@@ -3,15 +3,13 @@ using UnityEngine;
 
 public class Letter : MonoBehaviour
 {
-    public Sprite sprite;
     public int index;
     public WordScramble wordScramble;
-    public string text;
+    [SerializeField] private string text;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        text = "";
         wordScramble = GameObject.FindGameObjectWithTag("WordScramble").GetComponent<WordScramble>();
     }
 
@@ -24,5 +22,15 @@ public class Letter : MonoBehaviour
     public void OnClick()
     {
         wordScramble.PlaceLetter(this);
+    }
+
+    public void SetText(string text)
+    {
+        this.text = text;
+    }
+
+    public string GetText()
+    {
+        return text;
     }
 }

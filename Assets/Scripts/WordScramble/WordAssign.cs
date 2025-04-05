@@ -1,15 +1,16 @@
 using System;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class WordAssign : MonoBehaviour
 {
     private string[] wordsHappy = { "stillness", "warmth", "routine", "solace", "gentleness", "comfort", "serenity", "tenderness",
-                                    "softness", "quietude", "echo", "familiarity", "memory", "reverie", "fragility"};
+                                    "softness", "quietude", "familiarity", "memory", "reverie", "fragility"};
     private string[] wordsSuicide = { "despair", "failure", "guilt", "collapse", "burden", "regret", "finality", "shame",
                                         "isolation", "escape", "relief", "decision", "blame", "silence", "release" };
     private string[] wordsMurder = { "betrayal", "poison", "premeditation", "jealousy", "manipulation", "hatred", "control", "deception",
-                                        "premonition", "retribution", "resentment", "intent", "justice", "silhouettes", "final cup" };
+                                        "premonition", "retribution", "resentment", "intent", "justice", "silhouettes", "porcelain" };
 
     private string[] endingHappy = { "The apartment was filled with a stillness that felt almost sacred",
                                      "She remembered the warmth of the tea more than the words they said",
@@ -20,7 +21,6 @@ public class WordAssign : MonoBehaviour
                                      "Her touch lingered on the page with a forgotten tenderness",
                                      "There was a softness in the air, as if nothing terrible had ever happened",
                                      "Quietude wasn't the absence of noise, but the presence of peace",
-                                     "Some mornings felt like echoes of better ones—almost the same, but thinner",
                                      "There was comfort in familiarity… and danger in breaking it",
                                      "Not all memories are loud. Some just hum in the background",
                                      "She floated through the room like a reverie, half-real, half-regret",
@@ -60,12 +60,16 @@ public class WordAssign : MonoBehaviour
                                     };
 
     WordScramble wordScramble;
+    [SerializeField] private GameObject[] items;
+    int wordIndex;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         wordScramble = this.gameObject.GetComponent<WordScramble>();
-        assignWords(wordsHappy[2], 3);
+        wordIndex = UnityEngine.Random.Range(0, wordsHappy.Length);
+        assignWords(wordsHappy[wordIndex], items.Length);
+        
     }
 
     // Update is called once per frame
@@ -73,15 +77,27 @@ public class WordAssign : MonoBehaviour
     {
         
     }
+    void reshuffle(GameObject[] obj)
+    {
+        for (int t = 0; t < obj.Length; t++)
+        {
+            GameObject tmp = obj[t];
+            int r = UnityEngine.Random.Range(t, obj.Length);
+            obj[t] = obj[r];
+            obj[r] = tmp;
+        }
+    }
 
     public void assignWords(string word, int nrParts)
     {
+        reshuffle(items);
         wordScramble.nrParts = nrParts;
         int nrLetters = word.Length;
         int m = nrLetters / nrParts;
         int dif = nrLetters - m * nrParts;
         int ram = 0;
         int j, i;
+        Debug.LogError(nrParts);
         for (i = 0; i < nrParts; i++)
         {
             string newWord = "";
@@ -107,10 +123,11 @@ public class WordAssign : MonoBehaviour
                 }
             }
             ram += j;
-            wordScramble.collectedLetters[i].index = i;
-            wordScramble.collectedLetters[i].text = newWord;
-            wordScramble.collectedLetters[i].gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = newWord;
+            items[i].GetComponent<Letter>().index = i;
+            items[i].GetComponent<Letter>().SetText(newWord);
+            //wordScramble.collectedLetters[i].gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = newWord;
             Debug.Log(newWord);
+            Debug.Log(items[i].GetComponent<Letter>().GetText());
             wordScramble.collectedLetters[i].gameObject.SetActive(true);
             wordScramble.letterHoldersGO[i].gameObject.SetActive(true);
         }
