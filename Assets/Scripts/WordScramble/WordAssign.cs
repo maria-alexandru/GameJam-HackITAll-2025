@@ -111,6 +111,8 @@ public class WordAssign : MonoBehaviour
             wordScramble.collectedLetters[i].text = newWord;
             wordScramble.collectedLetters[i].gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = newWord;
             Debug.Log(newWord);
+            wordScramble.collectedLetters[i].gameObject.SetActive(true);
+            wordScramble.letterHoldersGO[i].gameObject.SetActive(true);
         }
 
         for (; i < 5; i++)

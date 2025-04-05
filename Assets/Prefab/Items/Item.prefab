@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 8155058047013193318, guid: d0e83c67da6650d41a9047cdf0333ff9, type: 3}
+  m_Sprite: {fileID: 5668723071718756358, guid: 075bbb9f276bdca46a84d0f6867f87b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,8 +123,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.74359894, y: 0.0036633015}
-  m_Size: {x: 6.372655, y: 6.546834}
+  m_Offset: {x: -0.036945343, y: 0.0036633015}
+  m_Size: {x: 7.785962, y: 7.785962}
   m_Direction: 0
 --- !u!114 &6647608701831565090
 MonoBehaviour:
@@ -140,3 +140,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: A
   ItemSelectedMsj: {fileID: 0}
+  wordScramble: {fileID: 0}

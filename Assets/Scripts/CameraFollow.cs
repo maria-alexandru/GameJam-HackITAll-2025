@@ -34,13 +34,15 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         // limitez coordonatele
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), transform.position.y, transform.position.z);
+        //transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), transform.position.y, transform.position.z);
     }
 
-    void FixedUpdate() 
+    void LateUpdate() 
     {
         Vector3 targetPos = target.TransformPoint(new Vector3(0, Yoffset, Zoffset));
-        transform.position = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime);
+        if (Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime).x < maxX && 
+            Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime).x > minX)
+            transform.position = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime);
     }
 
     // limitele fara dimensiunea camerei

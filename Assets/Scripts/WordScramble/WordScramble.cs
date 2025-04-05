@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class WordScramble : MonoBehaviour
     public int nrParts;
     public bool complete;
     public TextMeshProUGUI textMessage;
+    public GameObject panel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,6 +43,8 @@ public class WordScramble : MonoBehaviour
             letter.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text;
             //.GetChild()GetComponent<Image>().sprite = letter.sprite;
             letterHolders[crtIndex++] = letter;
+            if (crtIndex == nrParts)
+                Check();
         }        
     }
 
@@ -52,13 +56,14 @@ public class WordScramble : MonoBehaviour
             {
                 ResetGame();
                 complete = false;
-                textMessage.text = "TRY AGAIN!";
+                StartCoroutine(TryAgain());
                 return false;
 
             }
         }
         complete = true;
         textMessage.text = "THE WORD IS CORRECT!";
+        StartCoroutine(ClosePanelTime());
         //ResetGame();
         return true;
     }
@@ -71,5 +76,30 @@ public class WordScramble : MonoBehaviour
         }
         textMessage.text = "ARRANGE THE LETTERS IN THE CORRECT ORDER TO FORM THE WORD";
         crtIndex = 0;
+    }
+
+    private IEnumerator TryAgain()
+    {
+        textMessage.text = "TRY AGAIN!";
+        yield return new WaitForSeconds(1);
+        textMessage.text = "ARRANGE THE LETTERS IN THE CORRECT ORDER TO FORM THE WORD";
+    }
+
+
+    private IEnumerator ClosePanelTime()
+    {
+        yield return new WaitForSeconds(1);
+        panel.SetActive(false);
+    }
+
+    public void ClosePanel()
+    {
+        panel.SetActive(false);
+    }
+
+    public void OpenPanel()
+    {
+        panel.SetActive(true);
+        ResetGame();
     }
 }
