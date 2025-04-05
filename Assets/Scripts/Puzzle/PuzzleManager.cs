@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class PuzzleManager : MonoBehaviour
 {
+    [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject endPanel;
+
     [Header("Game Elements")]
     [Range(2, 6)]
     [SerializeField] private int difficulty = 2;
@@ -25,6 +28,7 @@ public class PuzzleManager : MonoBehaviour
     private Vector3 offset;
 
     private int piecesCorrect;
+    private bool started;
 
     void Start()
     {
@@ -38,8 +42,14 @@ public class PuzzleManager : MonoBehaviour
             image.GetComponent<Button>().onClick.AddListener(delegate { StartGame(texture); });
         }
         */
-        difficulty = Random.Range(3, 6);
-        StartGame(imageTextures);
+        difficulty = Random.Range(2, 5);
+        started = false;
+        //StartGame(imageTextures);
+    }
+
+    public void OpenEnd()
+    {
+        endPanel.SetActive(true);
     }
 
     public void StartGame(Texture2D jigsawTexture)
@@ -180,6 +190,13 @@ public class PuzzleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Return) && started == false)
+        {
+            started = true;
+            panel.SetActive(false);
+            StartGame(imageTextures);
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -237,6 +254,7 @@ public class PuzzleManager : MonoBehaviour
             if (piecesCorrect == pieces.Count)
             {
                 //playAgainButton.SetActive(true);
+                OpenEnd();
             }
         }
     }
