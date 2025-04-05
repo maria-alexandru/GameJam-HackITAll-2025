@@ -20,6 +20,8 @@ public class WordScramble : MonoBehaviour
     public bool complete;
     public TextMeshProUGUI textMessage;
     public GameObject panel;
+    public GameObject memoryPanel;
+    public TextMeshProUGUI memoryText;
     public bool isOpen;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -121,9 +123,10 @@ public class WordScramble : MonoBehaviour
 
     private IEnumerator Correct()
     {
-        textMessage.text = "THE WORD IS CORRECT!"; 
+        textMessage.text = "THE WORD IS CORRECT!";
         yield return new WaitForSeconds(1);
-        StartCoroutine(ClosePanelTime());
+        OpenMemoryPanel();
+        //StartCoroutine(ClosePanelTime());
         //textMessage.text = "ARRANGE THE LETTERS IN THE CORRECT ORDER TO FORM THE WORD";
     }
 
@@ -150,5 +153,11 @@ public class WordScramble : MonoBehaviour
             AddCollectedLetter();
             panel.SetActive(true);
         }
+    }
+
+    public void OpenMemoryPanel()
+    {
+        memoryPanel.SetActive(true);
+        memoryText.gameObject.SetActive(true);
     }
 }

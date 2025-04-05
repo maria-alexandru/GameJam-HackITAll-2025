@@ -69,7 +69,7 @@ public class WordAssign : MonoBehaviour
         wordScramble = this.gameObject.GetComponent<WordScramble>();
         wordIndex = UnityEngine.Random.Range(0, wordsHappy.Length);
         assignWords(wordsHappy[wordIndex], items.Length);
-        
+        wordScramble.memoryText.text = endingHappy[wordIndex];
     }
 
     // Update is called once per frame
