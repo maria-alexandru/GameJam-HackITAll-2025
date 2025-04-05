@@ -40,7 +40,7 @@ public class ItemCS : MonoBehaviour
     IEnumerator ApplyFunctionWithDelay() 
     {
         Debug.Log("ss");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         Debug.Log("sa");
         ItemSelectedMsj.SetActive(false);
