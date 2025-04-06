@@ -10,6 +10,8 @@ public class StoryTextManager : MonoBehaviour
 
     private int currentIndex = 0;
     private bool isFading = false;
+    public bool enableSound = false;
+    public AudioSource phraseAudio;
 
     void Start()
     {
@@ -34,6 +36,8 @@ public class StoryTextManager : MonoBehaviour
 
     IEnumerator ShowPhrase(string phrase)
     {
+        if (enableSound && phraseAudio != null)
+            phraseAudio.Play();
         isFading = true;
         storyText.text = phrase;
         storyText.alpha = 0f;
