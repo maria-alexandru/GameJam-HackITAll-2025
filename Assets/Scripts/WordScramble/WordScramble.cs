@@ -71,8 +71,8 @@ public class WordScramble : MonoBehaviour
             }
             collectedLetters[nrCollected].index = letter.index;
             collectedLetters[nrCollected].SetText(letter.GetText());
-            TextMeshProUGUI textM = collectedLetters[i].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-            textM.text = collectedLetters[i].GetText();
+            TextMeshProUGUI textM = collectedLetters[nrCollected].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            textM.text = collectedLetters[nrCollected].GetText();
             collectedLetters[nrCollected].gameObject.GetComponent<Button>().interactable = true;
 
             nrCollected++;
