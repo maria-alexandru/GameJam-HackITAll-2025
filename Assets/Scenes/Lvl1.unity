@@ -2534,22 +2534,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordScramble
       objectReference: {fileID: 0}
-    - target: {fileID: 3350358785817442203, guid: 6326a965c6e461f488bd463fb7309429, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741795420487180117, guid: 6326a965c6e461f488bd463fb7309429, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.8991811
-      objectReference: {fileID: 0}
-    - target: {fileID: 3938813259896791229, guid: 6326a965c6e461f488bd463fb7309429, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -799297761933666314, guid: cef757133c9ed4d4786d1112a37abfae, type: 3}
-    - target: {fileID: 3938813259896791229, guid: 6326a965c6e461f488bd463fb7309429, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5418440841846358577, guid: 6326a965c6e461f488bd463fb7309429, type: 3}
       propertyPath: m_LocalPosition.x
       value: 343.3165
@@ -2589,10 +2573,6 @@ PrefabInstance:
     - target: {fileID: 5418440841846358577, guid: 6326a965c6e461f488bd463fb7309429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8914132961384019317, guid: 6326a965c6e461f488bd463fb7309429, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

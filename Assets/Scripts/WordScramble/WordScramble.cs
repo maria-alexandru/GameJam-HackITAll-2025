@@ -26,6 +26,10 @@ public class WordScramble : MonoBehaviour
     public TextMeshProUGUI memoryText;
     public bool isOpen;
 
+
+    [SerializeField] private GameObject pauseButton;
+    [SerializeField] private GameObject pausePanel;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -149,6 +153,7 @@ public class WordScramble : MonoBehaviour
 
     public void ClosePanel()
     {
+        pauseButton.SetActive(true);
         timeButton.SetActive(true);
         isOpen = false;
         panel.SetActive(false);
@@ -158,6 +163,7 @@ public class WordScramble : MonoBehaviour
     {       
         if (isOpen == false)
         {
+            pauseButton.SetActive(false);
             timeButton.SetActive(false);
             //Debug.LogError("d");
             ResetGame();
@@ -169,9 +175,30 @@ public class WordScramble : MonoBehaviour
 
     public void OpenMemoryPanel()
     {
+        pauseButton.SetActive(false);
         timeButton.SetActive(false);
         memoryPanel.SetActive(true);
         memoryText.gameObject.SetActive(true);
+    }
+
+    public void OpenPausePanel()
+    {
+        pauseButton.SetActive(false);
+        pausePanel.SetActive(true);
+        timeButton.SetActive(false);
+    }
+
+    public void ClosePausePanel()
+    {
+        pauseButton.SetActive(true);
+        pausePanel.SetActive(false);
+        timeButton.SetActive(true);
+    }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+
     }
 
     public void GoToNextScene()
