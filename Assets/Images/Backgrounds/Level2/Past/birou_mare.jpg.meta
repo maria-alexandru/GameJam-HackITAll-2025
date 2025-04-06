@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      birou_mare_0: 6712058927526056127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      telecomanda_0: -2449415076270878020
+      telecomanda_1: -2365024453858817295
+      telecomanda_2: -4615284614717331098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

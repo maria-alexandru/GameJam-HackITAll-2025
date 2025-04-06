@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fantana2_0: -5012190748866072870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
