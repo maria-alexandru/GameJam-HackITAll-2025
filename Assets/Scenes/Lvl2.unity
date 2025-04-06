@@ -1496,6 +1496,10 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 1676921010}
+    - target: {fileID: 8341539208124746730, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
+      propertyPath: timeButton
+      value: 
+      objectReference: {fileID: 2034035262}
     - target: {fileID: 8646855508004063070, guid: 5abfbaa655662d849bfbd565491c1f69, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

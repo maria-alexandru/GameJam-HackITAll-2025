@@ -21,6 +21,7 @@ public class WordScramble : MonoBehaviour
     public TextMeshProUGUI textMessage;
     public GameObject panel;
     public GameObject memoryPanel;
+    public GameObject timeButton;
     public TextMeshProUGUI memoryText;
     public bool isOpen;
 
@@ -139,6 +140,7 @@ public class WordScramble : MonoBehaviour
 
     public void ClosePanel()
     {
+        timeButton.SetActive(true);
         isOpen = false;
         panel.SetActive(false);
     }
@@ -147,6 +149,7 @@ public class WordScramble : MonoBehaviour
     {       
         if (isOpen == false)
         {
+            timeButton.SetActive(false);
             Debug.LogError("d");
             ResetGame();
             isOpen = true;
@@ -157,6 +160,7 @@ public class WordScramble : MonoBehaviour
 
     public void OpenMemoryPanel()
     {
+        timeButton.SetActive(false);
         memoryPanel.SetActive(true);
         memoryText.gameObject.SetActive(true);
     }
