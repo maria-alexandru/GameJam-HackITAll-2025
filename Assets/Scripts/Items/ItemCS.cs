@@ -51,7 +51,7 @@ public class ItemCS : MonoBehaviour
     IEnumerator ApplyFunctionWithDelay() 
     {
         Debug.Log("ss");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         Debug.Log("sa");
         ItemSelectedMsj.SetActive(false);
