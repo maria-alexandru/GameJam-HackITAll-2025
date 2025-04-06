@@ -6,6 +6,7 @@ using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WordScramble : MonoBehaviour
 {
@@ -44,11 +45,16 @@ public class WordScramble : MonoBehaviour
 
     public void AddCollectedLetter()
     {
-        Debug.LogError(InteractionManager.selectedItems.Count);
+        if(InteractionManager.selectedItems == null) {
+            Debug.Log("null list");
+            return;
+        }
+
+        // Debug.LogError(InteractionManager.selectedItems.Count);
         Letter letter;
         for (int i = 0; i < InteractionManager.selectedItems.Count; i++)
         {
-            letter = InteractionManager.selectedItems.ElementAt(i).GetComponent<Letter>();
+             letter = InteractionManager.selectedItems.ElementAt(i).GetComponent<Letter>();
             if (letter.GetText() == "")
             {
                 InteractionManager.selectedItems.Remove(InteractionManager.selectedItems.ElementAt(i));
@@ -62,9 +68,9 @@ public class WordScramble : MonoBehaviour
             collectedLetters[i].gameObject.GetComponent<Button>().interactable = true;
 
 
-            Debug.Log("--" + letter.GetText());
-            Debug.Log("---" + collectedLetters[i].GetText());
-            Debug.Log("!" + collectedLetters[i].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().name);
+            //Debug.Log("--" + letter.GetText());
+            //Debug.Log("---" + collectedLetters[i].GetText());
+            //Debug.Log("!" + collectedLetters[i].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().name);
         }
         nrCollected = InteractionManager.selectedItems.Count;
     }
@@ -150,7 +156,7 @@ public class WordScramble : MonoBehaviour
         if (isOpen == false)
         {
             timeButton.SetActive(false);
-            Debug.LogError("d");
+            //Debug.LogError("d");
             ResetGame();
             isOpen = true;
             AddCollectedLetter();
@@ -167,6 +173,19 @@ public class WordScramble : MonoBehaviour
 
     public void GoToNextScene()
     {
+        if (SceneManager.GetActiveScene().name == "Lvl1")
+        {
+           SceneManager.LoadScene("Lvl22");
+        }
 
+        if (SceneManager.GetActiveScene().name == "Lvl22")
+        {
+           SceneManager.LoadScene("Lvl3");
+        }
+
+        if (SceneManager.GetActiveScene().name == "Lvl3")
+        {
+           SceneManager.LoadScene("Puzzle");
+        }
     }
 }

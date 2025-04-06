@@ -1237,7 +1237,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7976988619875959152}
         m_TargetAssemblyTypeName: WordScramble, Assembly-CSharp
-        m_MethodName: ClosePanel
+        m_MethodName: GoToNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

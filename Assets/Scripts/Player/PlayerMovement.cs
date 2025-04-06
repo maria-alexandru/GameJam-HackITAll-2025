@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //this.transform.position = 
         margins = GameObject.Find("Camera").GetComponent<CameraFollow>();
         orientation = true;
         rigidBody = this.GetComponent<Rigidbody2D>();
@@ -26,8 +27,10 @@ public class PlayerMovement : MonoBehaviour
     {
         move = Input.GetAxis("Horizontal");
 
-        if(rigidBody != null)
+        if(rigidBody != null) {
             rigidBody.linearVelocity = new Vector2(move * speed, 0);
+            //Debug.Log("move: " + move + "\n");
+        }
 
         Orientation();
 

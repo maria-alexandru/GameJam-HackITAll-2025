@@ -19,7 +19,7 @@ public class InteractionManager : MonoBehaviour
 
     // este in range si marchez
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("" + other.gameObject.name);
+        //Debug.Log("" + other.gameObject.name);
         if(other.CompareTag("Item") || other.CompareTag("Panel")) {
             GameObject item = other.gameObject;
             ItemCS script = item.GetComponent<ItemCS>();

@@ -1697,6 +1697,7 @@ MonoBehaviour:
   message: A
   ItemSelectedMsj: {fileID: 420698828}
   wordScramble: {fileID: 0}
+  isSelected: 0
 --- !u!70 &1622182263
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2157,7 +2158,7 @@ PrefabInstance:
       objectReference: {fileID: 19969992}
     - target: {fileID: 2969152528501882844, guid: 56b903a31a04d9a4b81a7212d34f6093, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.71
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 2969152528501882844, guid: 56b903a31a04d9a4b81a7212d34f6093, type: 3}
       propertyPath: m_LocalPosition.y

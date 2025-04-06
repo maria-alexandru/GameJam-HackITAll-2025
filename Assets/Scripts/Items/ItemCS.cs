@@ -9,10 +9,12 @@ public class ItemCS : MonoBehaviour
     public string message;
     public GameObject ItemSelectedMsj;
     public WordScramble wordScramble;
+    public bool isSelected;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        isSelected = false;
         wordScramble = GameObject.FindGameObjectWithTag("WordScramble").GetComponent<WordScramble>();
         ItemSelectedMsj.SetActive(false);
         inRange = false;
@@ -30,14 +32,14 @@ public class ItemCS : MonoBehaviour
 
                 if (hit.collider != null) 
                 {
-                    Debug.Log("!" + hit.collider.tag);
+                    // Debug.Log("!" + hit.collider.tag);
                     if (hit.transform.tag == "Panel")
                     {
                         wordScramble.OpenPanel();
                     }
                     else if (hit.transform.tag == "Item")
                     {
-                        Debug.Log("hit: " + hit.collider.gameObject.name);
+                        //Debug.Log("hit: " + hit.collider.gameObject.name);
                         InteractionManager.getList().Add(this.gameObject);
 
                         ItemSelectedMsj.SetActive(true);
@@ -50,12 +52,12 @@ public class ItemCS : MonoBehaviour
 
     IEnumerator ApplyFunctionWithDelay() 
     {
-        Debug.Log("ss");
         yield return new WaitForSeconds(0.5f);
 
-        Debug.Log("sa");
         ItemSelectedMsj.SetActive(false);
+        //Destroy(this.gameObject);
         this.gameObject.SetActive(false);
+        isSelected = true;
 
     }
 

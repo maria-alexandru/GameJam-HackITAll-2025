@@ -45,17 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pastSprites:
-  - {fileID: -6762806206646994688, guid: 3190eefff97a7b2498d5e9539cada9d8, type: 3}
-  - {fileID: -2464690855287773643, guid: bc6ca9ceca7e8dd4a97683a2a14b4f29, type: 3}
-  - {fileID: 8197047826604361390, guid: babc3ffb29f353942b9770907d9e6fb0, type: 3}
-  - {fileID: -3521427111303423466, guid: 8d1d55c2d7c4f504b9f992d661b084bb, type: 3}
-  - {fileID: 7796136391868462456, guid: fa308d6679dda864ca8070577ba6e859, type: 3}
+  - {fileID: -855298285791758126, guid: 06cb76326df723141b70c95a8e0b2584, type: 3}
+  - {fileID: 6937817954938267909, guid: 5f15c2ff0a0177d4198ffde718b3366f, type: 3}
+  - {fileID: -6470460504253458178, guid: 7f804dc0c9b71024d909d12474f677a3, type: 3}
+  - {fileID: -4178046375966092550, guid: 9042abccf0f126c49acc6de71adada7b, type: 3}
+  - {fileID: 3465286685962602723, guid: 4bbb68358ebdd2146be7e8c722e4f4a8, type: 3}
   presentSprites:
-  - {fileID: -6762806206646994688, guid: 9c738f21e1e9fa044b7dddd3ae876ca7, type: 3}
-  - {fileID: -482408867272285027, guid: ba1fe9f6bb1271f4e883aadb5d180e89, type: 3}
-  - {fileID: 8197047826604361390, guid: 73f87213ddf7bf94b996b3957d533855, type: 3}
-  - {fileID: -3521427111303423466, guid: 30ed19ce10bcd4e4f9c8b60224fc8129, type: 3}
-  - {fileID: 6723359014397041180, guid: 13955d541aac2c844ad8708eaf6969e0, type: 3}
+  - {fileID: 8351386567841520562, guid: 690f2f4b6dfa508459cf4aab3a45cc64, type: 3}
+  - {fileID: -5012190748866072870, guid: 4f40371349bcd5c4a863086209cc5957, type: 3}
+  - {fileID: -536310314660269243, guid: edc35016e4940a747bfeaf7ab5e74ac9, type: 3}
+  - {fileID: -4695174709476054175, guid: 77797c189e6296643bb0ba4c1cf30176, type: 3}
+  - {fileID: 3465286685962602723, guid: 4bbb68358ebdd2146be7e8c722e4f4a8, type: 3}
   pastWall: {fileID: -965144282303421702, guid: 4261fafe387c4e4469e0bed748900fa9, type: 3}
   presentWall: {fileID: -3392885455431205278, guid: 71f98ad01b4b4c646b1ff964930f3ebe, type: 3}
   backgroundImages:
@@ -72,3 +72,6 @@ MonoBehaviour:
   puzzleManager: {fileID: 0}
   puzzleImage: {fileID: 2800000, guid: 5e32514a4966a7d4ea735c7a670286e8, type: 3}
   opt: -1
+  pastImg: {fileID: -408273337209827603, guid: 078d403b297c1e04f9b552e60cd35000, type: 3}
+  presentImg: {fileID: 1784017705716482965, guid: 4da3cab239445bf4e9c0c8c0ac5bc4a0, type: 3}
+  button: {fileID: 0}

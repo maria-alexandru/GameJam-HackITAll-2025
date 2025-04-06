@@ -201,7 +201,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6804218317153732802}
         m_TargetAssemblyTypeName: WordScramble, Assembly-CSharp
-        m_MethodName: ClosePanel
+        m_MethodName: GoToNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2226,11 +2226,11 @@ PrefabInstance:
       objectReference: {fileID: 4386167802526894100}
     - target: {fileID: 2707784017018145518, guid: b6cf29d35216ad049bdcd9751f510429, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -358.3165
+      value: -360.06
       objectReference: {fileID: 0}
     - target: {fileID: 2707784017018145518, guid: b6cf29d35216ad049bdcd9751f510429, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -743.14355
+      value: -745.54
       objectReference: {fileID: 0}
     - target: {fileID: 2707784017018145518, guid: b6cf29d35216ad049bdcd9751f510429, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2263,6 +2263,10 @@ PrefabInstance:
     - target: {fileID: 2707784017018145518, guid: b6cf29d35216ad049bdcd9751f510429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661145001397372716, guid: b6cf29d35216ad049bdcd9751f510429, type: 3}
+      propertyPath: positions.Array.data[2].y
+      value: -0.69
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

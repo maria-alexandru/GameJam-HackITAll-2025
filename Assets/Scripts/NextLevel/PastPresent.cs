@@ -24,7 +24,6 @@ public class PastPresent : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        items = GameObject.FindGameObjectsWithTag("Item");
         initItemsData();
 
         opt = 0;
@@ -34,8 +33,9 @@ public class PastPresent : MonoBehaviour
 
     void initItemsData() 
     {
+        items = GameObject.FindGameObjectsWithTag("Item");
         index = Random.Range(0, possibilities);
-        Debug.Log(index);
+        //Debug.Log(index);
         foreach(GameObject obj in items)
         {
             ObjectData data = obj.GetComponent<ObjectData>();
@@ -70,11 +70,14 @@ public class PastPresent : MonoBehaviour
     {
         button.GetComponent<Image>().sprite = pastImg;
         for(int i = 0; i < items.Length; i++) {
-            if (items[i].layer == 6) {
-                items[i].SetActive(true);
-            } else if(items[i].layer == 7) {
-                items[i].SetActive(false);
-            }
+            ItemCS data = items[i].GetComponent<ItemCS>();
+
+            if(data.isSelected == false)
+                if (items[i].layer == 6) {
+                    items[i].SetActive(true);
+                } else if(items[i].layer == 7) {
+                    items[i].SetActive(false);
+                }
         }
 
         for (int i = 0; i < backgroundImages.Length; i++)
@@ -92,11 +95,14 @@ public class PastPresent : MonoBehaviour
         button.GetComponent<Image>().sprite = presentImg;
 
         for(int i = 0; i < items.Length; i++) {
-            if (items[i].layer == 6) {
-                items[i].SetActive(false);
-            } else if(items[i].layer == 7) {
-                items[i].SetActive(true);
-            }
+            ItemCS data = items[i].GetComponent<ItemCS>();
+
+            if(data.isSelected == false)
+                if (items[i].layer == 6) {
+                    items[i].SetActive(false);
+                } else if(items[i].layer == 7) {
+                    items[i].SetActive(true);
+                }
         }
 
         for (int i = 0; i < backgroundImages.Length; i++)

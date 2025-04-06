@@ -963,6 +963,22 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
+      propertyPath: 'pastSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -6762806206646994688, guid: 3190eefff97a7b2498d5e9539cada9d8, type: 3}
+    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
+      propertyPath: 'pastSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2464690855287773643, guid: bc6ca9ceca7e8dd4a97683a2a14b4f29, type: 3}
+    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
+      propertyPath: 'pastSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8197047826604361390, guid: babc3ffb29f353942b9770907d9e6fb0, type: 3}
+    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
+      propertyPath: 'pastSprites.Array.data[3]'
+      value: 
+      objectReference: {fileID: -3521427111303423466, guid: 8d1d55c2d7c4f504b9f992d661b084bb, type: 3}
+    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
       propertyPath: 'pastSprites.Array.data[4]'
       value: 
       objectReference: {fileID: 7796136391868462456, guid: fa308d6679dda864ca8070577ba6e859, type: 3}
@@ -990,6 +1006,22 @@ PrefabInstance:
       propertyPath: backgroundImages.Array.size
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
+      propertyPath: 'presentSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -6762806206646994688, guid: 9c738f21e1e9fa044b7dddd3ae876ca7, type: 3}
+    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
+      propertyPath: 'presentSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -482408867272285027, guid: ba1fe9f6bb1271f4e883aadb5d180e89, type: 3}
+    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
+      propertyPath: 'presentSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8197047826604361390, guid: 73f87213ddf7bf94b996b3957d533855, type: 3}
+    - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
+      propertyPath: 'presentSprites.Array.data[3]'
+      value: 
+      objectReference: {fileID: -3521427111303423466, guid: 30ed19ce10bcd4e4f9c8b60224fc8129, type: 3}
     - target: {fileID: 9098558035739380724, guid: 41427ca38c1991447b74a268fdcb6bbc, type: 3}
       propertyPath: 'presentSprites.Array.data[4]'
       value: 
@@ -1839,6 +1871,7 @@ MonoBehaviour:
   message: A
   ItemSelectedMsj: {fileID: 420698828}
   wordScramble: {fileID: 0}
+  isSelected: 0
 --- !u!70 &1622182263
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
