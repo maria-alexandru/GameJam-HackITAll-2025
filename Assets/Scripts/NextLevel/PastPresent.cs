@@ -12,15 +12,36 @@ public class PastPresent : MonoBehaviour
     [SerializeField] private PuzzleManager puzzleManager;
     [SerializeField] private Texture2D puzzleImage;
     [SerializeField] private int opt;
+    [SerializeField] private Sprite pastImg, presentImg;
+    [SerializeField] private GameObject button;
+    private GameObject[] items;
+    private const int possibilities = 3;
+    private int index;
+
     // 9C9C9C - culoare trecut perete
     // 7E7E7E - culoare present perete
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        items = GameObject.FindGameObjectsWithTag("Item");
+        initItemsData();
+
         opt = 0;
         PastToPresent();
 
+    }
+
+    void initItemsData() 
+    {
+        index = Random.Range(0, possibilities);
+        Debug.Log(index);
+        foreach(GameObject obj in items)
+        {
+            ObjectData data = obj.GetComponent<ObjectData>();
+            obj.transform.position = data.positions[index];
+
+        }
     }
 
     // Update is called once per frame
@@ -28,7 +49,12 @@ public class PastPresent : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            if (opt == 0)
+            ChooseButton();
+        }
+    }
+
+    public void ChooseButton() {
+        if (opt == 0)
             {
                 opt = 1;
                 PresentToPast();
@@ -38,11 +64,19 @@ public class PastPresent : MonoBehaviour
                 opt = 0;
                 PastToPresent();
             }
-        }
     }
 
     public void PastToPresent()
     {
+        button.GetComponent<Image>().sprite = pastImg;
+        for(int i = 0; i < items.Length; i++) {
+            if (items[i].layer == 6) {
+                items[i].SetActive(true);
+            } else if(items[i].layer == 7) {
+                items[i].SetActive(false);
+            }
+        }
+
         for (int i = 0; i < backgroundImages.Length; i++)
         {
             backgroundImages[i].GetComponent<SpriteRenderer>().sprite = presentSprites[i];
@@ -55,7 +89,16 @@ public class PastPresent : MonoBehaviour
 
     public void PresentToPast()
     {
-        //puzzleManager.StartGame(puzzleImage);
+        button.GetComponent<Image>().sprite = presentImg;
+
+        for(int i = 0; i < items.Length; i++) {
+            if (items[i].layer == 6) {
+                items[i].SetActive(false);
+            } else if(items[i].layer == 7) {
+                items[i].SetActive(true);
+            }
+        }
+
         for (int i = 0; i < backgroundImages.Length; i++)
         {
             backgroundImages[i].GetComponent<SpriteRenderer>().sprite = pastSprites[i];
