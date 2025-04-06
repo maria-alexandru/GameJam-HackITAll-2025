@@ -56,6 +56,7 @@ public class WordScramble : MonoBehaviour
 
         // Debug.LogError(InteractionManager.selectedItems.Count);
         Letter letter;
+        nrCollected = 0;
         for (int i = 0; i < InteractionManager.selectedItems.Count; i++)
         {
             //Debug.Log(InteractionManager.selectedItems.ElementAt(i) + "");
@@ -68,18 +69,18 @@ public class WordScramble : MonoBehaviour
                 i--;
                 continue;
             }
-            collectedLetters[i].index = letter.index;
-            collectedLetters[i].SetText(letter.GetText());
+            collectedLetters[nrCollected].index = letter.index;
+            collectedLetters[nrCollected].SetText(letter.GetText());
             TextMeshProUGUI textM = collectedLetters[i].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
             textM.text = collectedLetters[i].GetText();
-            collectedLetters[i].gameObject.GetComponent<Button>().interactable = true;
+            collectedLetters[nrCollected].gameObject.GetComponent<Button>().interactable = true;
 
-
+            nrCollected++;
             //Debug.Log("--" + letter.GetText());
             //Debug.Log("---" + collectedLetters[i].GetText());
             //Debug.Log("!" + collectedLetters[i].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().name);
         }
-        nrCollected = InteractionManager.selectedItems.Count;
+        //nrCollected = InteractionManager.selectedItems.Count;
     }
 
     public void PlaceLetter(Letter letter)
