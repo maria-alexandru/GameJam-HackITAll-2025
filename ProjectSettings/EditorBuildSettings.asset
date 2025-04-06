@@ -8,6 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Lvl1.unity
+    guid: c1f60348b3347e9478d60258638f8510
+  - enabled: 1
+    path: Assets/Scenes/Lvl22.unity
+    guid: 9e65974925c393c438a499e78a9b8b9e
+  - enabled: 1
+    path: Assets/Scenes/Lvl3.unity
+    guid: c3348f03a81f0ec4e90e67c223063dfc
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 991ed40fcd578f046bcce4206f831dde
+  - enabled: 1
+    path: Assets/Scenes/Puzzle.unity
+    guid: d1d0c9ee19ac5304cbb75f321a253c2f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
