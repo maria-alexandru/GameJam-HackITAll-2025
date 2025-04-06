@@ -143,6 +143,7 @@ MonoBehaviour:
   message: A
   ItemSelectedMsj: {fileID: 0}
   wordScramble: {fileID: 0}
+  isSelected: 0
 --- !u!114 &2403734003503144874
 MonoBehaviour:
   m_ObjectHideFlags: 0

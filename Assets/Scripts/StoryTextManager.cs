@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class StoryTextManager : MonoBehaviour
 {
@@ -31,6 +32,10 @@ public class StoryTextManager : MonoBehaviour
         {
             StartCoroutine(ShowPhrase(phrases[currentIndex]));
             currentIndex++;
+        }
+        if (Input.GetKeyDown(KeyCode.Return) && currentIndex == phrases.Length - 1)
+        {
+            SceneManager.LoadScene("Lvl1");
         }
     }
 

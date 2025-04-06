@@ -481,7 +481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7179469084592883718, guid: fabca75d6bd222f428b599bb084a6302, type: 3}
+  m_Sprite: {fileID: -855298285791758126, guid: d7639016bcb109742a845cf1d2a71651, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -525,8 +525,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180.66777, y: 35.443714}
-  m_SizeDelta: {x: 316.148, y: 170.2884}
+  m_AnchoredPosition: {x: 5.5851, y: -152.53258}
+  m_SizeDelta: {x: 674.7201, y: 105.0652}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2879416347998276531
 CanvasRenderer:
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.3
+  m_fontSize: 35.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1217,14 +1217,14 @@ RectTransform:
   m_GameObject: {fileID: 8600837524578546467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.563372, y: 2.01668, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6384165780155918539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -189, y: -115}
+  m_AnchoredPosition: {x: 293, y: 175}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4177799491390535991
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -577897658527309759, guid: dbae576cc29ea8743973dfc43768fb8a, type: 3}
+  m_Sprite: {fileID: -799297761933666314, guid: cef757133c9ed4d4786d1112a37abfae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2182,6 +2182,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8373347836851144503, guid: 9be9a54170f682141a8ac8922dde9b1d, type: 3}
+      propertyPath: wordScramble
+      value: 
+      objectReference: {fileID: 2951597075438928975}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -125,8 +125,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.036945343, y: 0.0036633015}
-  m_Size: {x: 7.785962, y: 7.785962}
+  m_Offset: {x: 0.26043096, y: 0.0036633015}
+  m_Size: {x: 12.0153265, y: 12.0153265}
   m_Direction: 0
 --- !u!114 &7021652035981562547
 MonoBehaviour:
@@ -143,6 +143,7 @@ MonoBehaviour:
   message: A
   ItemSelectedMsj: {fileID: 0}
   wordScramble: {fileID: 0}
+  isSelected: 0
 --- !u!114 &1140327003566184007
 MonoBehaviour:
   m_ObjectHideFlags: 0

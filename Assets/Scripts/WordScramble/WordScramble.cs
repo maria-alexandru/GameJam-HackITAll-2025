@@ -54,6 +54,9 @@ public class WordScramble : MonoBehaviour
         Letter letter;
         for (int i = 0; i < InteractionManager.selectedItems.Count; i++)
         {
+            //Debug.Log(InteractionManager.selectedItems.ElementAt(i) + "");
+            //Debug.Log(InteractionManager.selectedItems.ElementAt(i).GetComponent<Letter>().GetText());
+
              letter = InteractionManager.selectedItems.ElementAt(i).GetComponent<Letter>();
             if (letter.GetText() == "")
             {
