@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TransitionManager : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class TransitionManager : MonoBehaviour
             }
             else
             {
+                SceneManager.LoadScene("Menu");
             }
         }
     }

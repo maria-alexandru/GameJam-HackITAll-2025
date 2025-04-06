@@ -47,8 +47,9 @@ public class PuzzleManager : MonoBehaviour
         //StartGame(imageTextures);
     }
 
-    public void OpenEnd()
+    public IEnumerator OpenEnd()
     {
+        yield return new WaitForSeconds(1);
         endPanel.SetActive(true);
     }
 
@@ -254,7 +255,7 @@ public class PuzzleManager : MonoBehaviour
             if (piecesCorrect == pieces.Count)
             {
                 //playAgainButton.SetActive(true);
-                OpenEnd();
+                StartCoroutine(OpenEnd());
             }
         }
     }
