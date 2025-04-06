@@ -7,12 +7,13 @@ public class Menu : MonoBehaviour
 {
     public GameObject storyPanel;
     public GameObject optionsPanel;
+    public GameObject backgroundPanel;
+
     public AudioSource audioSource;
     public AudioClip clickSound;
 
     private CanvasGroup canvasGroup;
     private CanvasGroup optionsCanvasGroup;
-    
 
     private bool hasFadedStory = false;
     private bool hasFadedOptions = false;
@@ -25,17 +26,21 @@ public class Menu : MonoBehaviour
         storyPanel.SetActive(false);
         optionsPanel.SetActive(false);
     }
+
     public void PlayAndLoad()
     {
-        audioSource.clip = clickSound;
-        audioSource.Play();
-
+        // 🔊 Redă doar sunetul de click
+        if (audioSource && clickSound)
+        {
+            audioSource.clip = clickSound;
+            audioSource.Play();
+        }
     }
 
     private IEnumerator FadeInPanel(GameObject panel, CanvasGroup cg)
     {
         panel.SetActive(true);
-        canvasGroup.alpha = 0f;
+        cg.alpha = 0f;
 
         float duration = 1f;
         float t = 0f;
@@ -43,15 +48,16 @@ public class Menu : MonoBehaviour
         while (t < duration)
         {
             t += Time.deltaTime;
-            canvasGroup.alpha = Mathf.Lerp(0f, 1f, t / duration);
+            cg.alpha = Mathf.Lerp(0f, 1f, t / duration);
             yield return null;
         }
 
-        canvasGroup.alpha = 1f;
+        cg.alpha = 1f;
     }
 
     public void ShowStory() 
     {
+        backgroundPanel.SetActive(false);
         if (!hasFadedStory)
         {
             hasFadedStory = true;
@@ -65,6 +71,7 @@ public class Menu : MonoBehaviour
 
     public void ShowOptions()
     {
+        backgroundPanel.SetActive(false);
         if (!hasFadedOptions)
         {
             hasFadedOptions = true;
