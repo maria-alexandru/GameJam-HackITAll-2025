@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9193333889999503774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5921622676174518709}
+  - component: {fileID: 9098558035739380724}
+  m_Layer: 0
+  m_Name: BackgroundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5921622676174518709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9193333889999503774}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9098558035739380724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9193333889999503774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a01dd48337651541a1eae273ffc322c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pastSprites:
+  - {fileID: -855298285791758126, guid: 06cb76326df723141b70c95a8e0b2584, type: 3}
+  - {fileID: 6937817954938267909, guid: 5f15c2ff0a0177d4198ffde718b3366f, type: 3}
+  - {fileID: -6470460504253458178, guid: 7f804dc0c9b71024d909d12474f677a3, type: 3}
+  - {fileID: -4178046375966092550, guid: 9042abccf0f126c49acc6de71adada7b, type: 3}
+  - {fileID: 3465286685962602723, guid: 4bbb68358ebdd2146be7e8c722e4f4a8, type: 3}
+  presentSprites:
+  - {fileID: 8351386567841520562, guid: 690f2f4b6dfa508459cf4aab3a45cc64, type: 3}
+  - {fileID: -5012190748866072870, guid: 4f40371349bcd5c4a863086209cc5957, type: 3}
+  - {fileID: -536310314660269243, guid: edc35016e4940a747bfeaf7ab5e74ac9, type: 3}
+  - {fileID: -4695174709476054175, guid: 77797c189e6296643bb0ba4c1cf30176, type: 3}
+  - {fileID: 3465286685962602723, guid: 4bbb68358ebdd2146be7e8c722e4f4a8, type: 3}
+  pastWall: {fileID: -965144282303421702, guid: 4261fafe387c4e4469e0bed748900fa9, type: 3}
+  presentWall: {fileID: -3392885455431205278, guid: 71f98ad01b4b4c646b1ff964930f3ebe, type: 3}
+  backgroundImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  wallsImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  puzzleManager: {fileID: 0}
+  puzzleImage: {fileID: 2800000, guid: 5e32514a4966a7d4ea735c7a670286e8, type: 3}
+  opt: -1
+  pastImg: {fileID: -408273337209827603, guid: 078d403b297c1e04f9b552e60cd35000, type: 3}
+  presentImg: {fileID: 1784017705716482965, guid: 4da3cab239445bf4e9c0c8c0ac5bc4a0, type: 3}
+  button: {fileID: 0}
